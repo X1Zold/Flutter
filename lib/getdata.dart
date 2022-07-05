@@ -1,4 +1,5 @@
 import 'package:aasflutter/productt.dart';
+import 'package:aasflutter/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -23,6 +24,30 @@ class Product extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Data Product'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: <Color>[
+                Colors.black,
+                Color.fromARGB(255, 136, 136, 32)
+              ])),
+        ),
+        leading: IconButton(
+          icon: new Icon(Icons.home, color: Colors.white),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return WelcomePage();
+            }));
+          },
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: new Icon(Icons.search, color: Colors.white),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Container(
         child: FutureBuilder<List<dynamic>>(

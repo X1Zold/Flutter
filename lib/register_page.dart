@@ -115,7 +115,7 @@ class RegisterPage extends StatelessWidget {
                         onPressed: () {
                           Navigator.pushReplacement(context,
                               MaterialPageRoute(builder: ((context) {
-                            return Product();
+                            return LoginPage();
                           })));
                         },
                         style: TextButton.styleFrom(

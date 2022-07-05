@@ -35,7 +35,17 @@ class ProductDetail extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          title: Text('Data Product'),
+          title: Text('Data Products'),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: <Color>[
+                  Colors.black,
+                  Color.fromARGB(255, 136, 136, 32)
+                ])),
+          ),
         ),
         body: SingleChildScrollView(
           child: Container(
